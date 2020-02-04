@@ -1,0 +1,41 @@
+{% extends './base.html' %}
+
+{% block title %} Gra {% endblock%}
+
+{% block content %}
+KOŚCI GRACZA NR.1:
+<form action="" method='POST'>
+<div>
+    Gracz1: <br />
+Wynik: {{wynikg1}}<br />
+Ruch: {{ruchg1}}<br />
+Gracz2: <br />
+Wynik: {{wynikg2}}<br />
+Ruch: {{ruchg2}} <br />
+    </div>
+    <p>ZAZNACZ KOŚCI KTÓTE ZOSTAWIASZ</p>
+{% csrf_token %}
+
+    <div class="board">
+      <div class="dice" data-value="{{kosc1}}">
+        <input type="checkbox" name="check"  value="kosc1" >
+      </div>
+      <div class="dice" data-value="{{kosc2}}">
+        <input type="checkbox"  name="check"  value="kosc2" >
+      </div>
+      <div class="dice" data-value="{{kosc3}}">
+        <input type="checkbox"  name="check"  value="kosc3" >
+      </div>
+      <div class="dice" data-value="{{kosc4}}">
+        <input type="checkbox"  name="check"  value="kosc4" >
+      </div>
+      <div class="dice" data-value="{{kosc5}}">
+        <input type="checkbox"  name="check"  value="kosc5">
+      </div>
+    </div>
+
+     <button type="submit" name="dalej">Dalej</button>
+     <button type="submit" name="reload">Odśwież</button>
+ <button type="submit" name="start">Strona główna</button>
+</form>
+{% endblock %}

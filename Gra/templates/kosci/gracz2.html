@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GRACZ2</title>
+    <style>
+        div {
+  background-color: rgb(255,150,150);
+  margin: auto;
+  width: 60%;
+  border: 1px solid rgb(255,120,120);
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color:white;
+}
+body{
+text-align:center;
+
+background-color: rgb(255,150,150);
+   text-align: center;
+  font-size: 20px;
+  color:white;
+}
+button{
+width: 20%;
+height: 50px;
+border: 0px;
+margin: 10px 10px 10px 10px;
+background-color: rgb(255,120,120);
+  text-align: center;
+  font-size: 20px;
+  color:white;
+}
+    </style>
+
+</head>
+<body>
+KOŚCI GRACZA NR.2:
+<form action="" method='POST'>
+<div>
+    Gracz1: <br />
+Wynik: {{wynikg1}}<br />
+Ruch: {{ruchg1}}<br />
+Gracz2: <br />
+Wynik: {{wynikg2}}<br />
+Ruch: {{ruchg2}} <br />
+    </div>
+    <p>ZAZNACZ KOŚCI KTÓTE ZOSTAWIASZ</p>
+{% csrf_token %}
+    <div>
+        {{kosc1}}
+        <input type="checkbox"  name="check"  value="kosc1">
+    </div>
+    <div>
+         {{kosc2}}
+        <input type="checkbox"  name="check"  value="kosc2">
+    </div>
+    <div>
+         {{kosc3}}
+        <input type="checkbox"  name="check"  value="kosc3">
+    </div>
+    <div>
+         {{kosc4}}
+        <input type="checkbox"  name="check"  value="kosc4">
+    </div>
+    <div>
+         {{kosc5}}
+        <input type="checkbox"  name="check"  value="kosc5">
+    </div>
+
+     <button type="submit" name="dalej">Dalej</button>
+     <button type="submit" name="reload">Odśwież</button>
+
+      <button type="submit" name="start">Strona główna</button>
+    </form>
+</body>
+</html>

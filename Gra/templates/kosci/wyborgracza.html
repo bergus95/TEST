@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+
+{% block title %} Wybór gracza {% endblock%}
+
+{% block content %}
+  <div class="player">
+    <h1 class="player__header">WYBÓR GRACZA</h1>
+    <form action="" method='POST'>
+      {% csrf_token %}
+      {{form.as_p}}
+      <div class="player__buttons">
+        
+        <button type="submit" name="gracz1" class="player__button">Gracz nr.1</button>
+        <button type="submit" name="gracz2" class="player__button">Gracz nr.2</button>
+      </div>
+      <div>
+      
+      <button name="cleargamers">wyczyść graczy</button>
+      </div>
+      
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,190 @@
+html {
+  background-color: #f6f6f6;
+  font-family: 'Roboto', Helvetica, Arial sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* START SCREEN */
+
+.start {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.start__header {
+  font-family: 'Abril Fatface', Helvetica, Arial, cursive;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.start__button {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  border: 0px;
+  border-radius: 50px;
+  margin: 10px 0;
+  background-color: #283f28;
+  text-align: center;
+  font-size: 20px;
+  color:white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start__button:hover {
+  background-color: #386138;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.start__icon {
+  margin: 0 10px 0 0 ;
+}
+
+
+/* CHOOSE PLAYER SCREEN */
+
+.errorlist {
+  display: none;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.player__header {
+  font-family: 'Abril Fatface', Helvetica, Arial, cursive;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.player label {
+  font-family: 'Abril Fatface', Helvetica, Arial, cursive;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.player input {
+  width: 100%;
+  height: 50px;
+  border: 0px;
+  border-radius: 50px;
+  margin: 0;
+  border: 2px solid #283f28;
+  text-align: center;
+  font-size: 20px;
+  color:#283f28;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+}
+
+.player__button {
+  width: 49%;
+  max-width: 300px;
+  height: 50px;
+  border: 0px;
+  border-radius: 50px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  background-color: #283f28;
+  color:#ffffff;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+  cursor: pointer;
+}
+
+.player__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* DICES */
+
+.board {
+  background-color: #283f28;
+  width: 700px;
+  height: 700px;
+  display: flex;
+  position: relative;
+}
+
+.dice {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin: 5px;
+  background-size: cover;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dice__saved {
+  background-color: yellow;
+}
+
+.dice input {
+  display: none;
+}
+
+.dice[data-value="1"] {
+  background-image: url('../img/1.png');
+}
+
+.dice[data-value="2"] {
+  background-image: url('../img/2.png');
+}
+
+.dice[data-value="3"] {
+  background-image: url('../img/3.png');
+}
+
+.dice[data-value="4"] {
+  background-image: url('../img/4.png');
+}
+
+.dice[data-value="5"] {
+  background-image: url('../img/5.png');
+}
+
+.dice[data-value="6"] {
+  background-image: url('../img/6.png');
+}
+
+.error {
+  text-align: center;
+}

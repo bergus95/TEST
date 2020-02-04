@@ -1,0 +1,43 @@
+{% extends './base.html' %}
+
+{% block title %} Gra {% endblock%}
+
+{% block content %}
+
+kości: {{kosci}}
+
+
+<form method="POST">
+{% csrf_token %}
+  <div class="board">
+    {% for k in kosci %}
+      <div class="dice" data-value="{{ k }}">
+        <input type="checkbox" name="check"  value="kosc{{ forloop.counter }}" >
+      </div>
+    {% endfor %}
+  </div>
+  {{blokuj_ruch}}
+    <button id="random" {% if not dozwolony_ruch %}disabled{% endif %}>Losuj</button>
+    <button id="accept" {% if not dozwolony_ruch %}disabled{% endif %}>Akceptuj</button>
+
+
+{% endblock %} 
+
+
+{% block script %}
+  <script>
+    
+
+
+  $('.dice').on("click", function() {
+    console.log($(this));
+    checkBox = $(this).find($('input'));
+    checkBox.prop('checked', !checkBox.is(':checked'));
+    $(this).toggleClass('dice__saved');
+  });
+
+
+
+   
+  </script>
+{% endblock %}

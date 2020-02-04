@@ -1,0 +1,17 @@
+{% extends './base.html' %}
+
+{% block title %} Strona główna {% endblock%}
+
+{% block content %}
+  <div class="start">
+    <h1 class="start__header">GRA W KOŚCI</h1>
+    <form action="" method='POST'>
+      {% csrf_token %}
+      <button type="submit" name="nowagra" class="start__button"><ion-icon name="play" class="start__icon"></ion-icon>Nowa gra</button><br />
+      <!--<button type="submit" name="clear" class="start_button">wyczyść historie i ranking</button><br />-->
+      <!--<button type="submit" name="cleargamers" class="start_button">wyczyść graczy</button><br />-->
+      <button type="submit" name="ranking" class="start__button"><ion-icon name="podium" class="start__icon"></ion-icon>Ranking</button><br />
+      <button type="submit" name="historia" class="start__button"><ion-icon name="filing" class="start__icon"></ion-icon>Historia</button>
+    </form>
+  </div>
+{% endblock %}
